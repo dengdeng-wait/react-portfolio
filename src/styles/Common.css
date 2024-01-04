@@ -1,0 +1,75 @@
+#root{min-height:100%;}
+@media (prefers-color-scheme: dark) {
+  html,body,#root{background-color: rgb(15 23 42 / var(--tw-bg-opacity))}
+  &::-webkit-scrollbar-thumb {
+    background-color: #cbcbcb;
+  }
+  .nav .active {
+    @apply text-white;
+  }
+}
+.wrap{min-height: 100vh;box-sizing: border-box}
+.grid-auto-rows{grid-auto-rows: 1fr;}
+.nav .active{
+  @apply bg-gray-800 text-white;
+}
+.btn {
+  @apply py-2 px-2 font-semibold;
+}
+
+.btn-green {
+  @apply text-white bg-green-500 hover:bg-green-700;
+}
+
+.btn-blue {
+  @apply text-white bg-blue-500 hover:bg-blue-700;
+}
+
+.btn-white {
+  @apply text-black bg-white hover:bg-black hover:text-white;
+}
+.scroll-ani{animation: scrollAni;animation-timeline: scroll();}
+@keyframes scrollAni {
+  from{
+    opacity: .1;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes word {
+  0% {
+    transform: translateY(100%);
+  }
+
+  15% {
+    transform: translateY(-10%);
+    animation-timing-function: ease-out;
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  40%,
+  100% {
+    transform: translateY(-110%);
+  }
+}
+
+.animate-word {
+  animation: word 7s infinite;
+}
+
+.animate-word-delay-1 {
+  animation: word 7s infinite;
+  animation-delay: -2.333s;
+}
+
+.animate-word-delay-2 {
+  animation: word 7s infinite;
+  animation-delay: -4.666s;
+}
+
+.moveTop{opacity: 0;transition: opacity 1s ease}
+.moveTop.active{opacity: 1;}
