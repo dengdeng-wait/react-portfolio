@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div className='wrap bg-gray-100 dark:bg-slate-900'>
-      <BrowserRouter basename="/build">
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className="p-4 pb-12">
           <Navi years={years} />
           <Routes>
