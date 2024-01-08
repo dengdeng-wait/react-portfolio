@@ -19,10 +19,10 @@ const App = () => {
         <div className="p-4 pb-12">
           <Navi years={years} />
           <Routes>
-            <Route path="/" element={<Contents />}></Route>
-            <Route path="/Contents/:years" element={<Contents />}></Route>
+            <Route path="/react-portfolio" element={<Contents />}></Route>
+            <Route path="/react-portfolio/Contents/:years" element={<Contents />}></Route>
             {/* 상단 위치 라우트 규칙 모두확인 일치 라우트 없는경우 처리 */}
-            <Route path={"/*"} element={<NotFound />}></Route>
+            <Route path="/react-portfolio/*" element={<NotFound />}></Route>
           </Routes>
           <MoveToUp></MoveToUp>
         </div>
