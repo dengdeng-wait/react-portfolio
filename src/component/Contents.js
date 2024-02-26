@@ -63,7 +63,9 @@ const Contents = (props) => {
   const yearsIndex = data.findIndex((obj) => obj.id === Number(pathId));
   const profile = data[yearsIndex];
   const profileEvery = data;
-  console.log(profile);
+  // const id = profile?.id;
+  console.log(profile?.titles.length);
+  profile?.titles.map((item, i) => console.log(item));
   // console.log(`${yearsIndex}`, data2);
 
   // const params = useParams();
@@ -92,7 +94,13 @@ const Contents = (props) => {
             </svg>
             {profile.years}
           </h2>
-          <ul className="grid grid-cols-1 auto-rows-auto sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+          <ul
+            className={
+              profile.titles.length === 1
+                ? `grid grid-cols-1 auto-rows-auto sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 gap-4`
+                : `grid grid-cols-1 auto-rows-auto sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4`
+            }
+          >
             {profile.titles.map((item, i) => (
               <li
                 key={i}
@@ -154,7 +162,14 @@ const Contents = (props) => {
                 </svg>
                 {years}
               </h2>
-              <ul className="grid grid-cols-1 auto-rows-auto sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+              {}
+              <ul
+                className={
+                  titles.length === 1
+                    ? `grid grid-cols-1 auto-rows-auto sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 gap-4`
+                    : `grid grid-cols-1 auto-rows-auto sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4`
+                }
+              >
                 {titles.map((item, i) => (
                   <li
                     key={i}
