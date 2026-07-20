@@ -41,9 +41,7 @@ const Contents = (props) => {
     const fetchData = async () => {
       try {
         // 데이터를 가져오는 API 호출 또는 기타 비동기 작업 수행
-        const response = await fetch(
-          `https://dengdeng-wait.github.io/portfolio/data/data2.json`
-        );
+        const response = await fetch(`https://dengdeng-wait.github.io/portfolio/data/data2.json`);
         const result = await response.json();
         setData(result.portfolio);
       } catch (error) {
@@ -102,10 +100,7 @@ const Contents = (props) => {
             }
           >
             {profile.titles.map((item, i) => (
-              <li
-                key={i}
-                className="mt-6 bg-white rounded-lg shadow-lg dark:bg-gray-800"
-              >
+              <li key={i} className="mt-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
                 <article className="w-full mx-auto">
                   <div>
                     <div className="flex-wrap items-center justify-center text-center sm:flex">
@@ -171,10 +166,7 @@ const Contents = (props) => {
                 }
               >
                 {titles.map((item, i) => (
-                  <li
-                    key={i}
-                    className="mt-6 bg-white rounded-lg shadow-lg dark:bg-gray-800"
-                  >
+                  <li key={i} className="mt-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
                     <article className="w-full mx-auto">
                       <div>
                         <div className="flex-wrap items-center justify-center text-center sm:flex">
