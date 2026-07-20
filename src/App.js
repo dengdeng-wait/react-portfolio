@@ -12,6 +12,7 @@ const App = () => {
   // const [mode, setMode] = useState(true);
 
   const years = [
+    "2026~2027",
     "2025~2024",
     "2023-2021",
     "2020-2019",
